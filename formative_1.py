@@ -16,10 +16,16 @@ For example, starting with N=3, which is odd, we multiply by 3 and add 1, giving
 
 Write your code below:
 '''
+n = int(input("Type your desired number:"))
 
-
-
-
+while n != 1:
+    if n % 2 == 0:
+        n /= 2
+        print(n)
+    else:
+        n *= 3
+        n += 1
+        print(n)
 
 '''
 ** Problem 2 **
@@ -37,3 +43,11 @@ Your number of eggs is 9 gross, 3 dozen, and 10.
 
 Write your code below:
 '''
+
+e = int(input("Type your egg amount here:"))
+
+g = e / 144
+d = e % 144 / 12
+c = e % 144 % 12 /1
+
+print("Gross = " + str(int(g)) + "  Dozen = " + str(int(d)) + "  Leftover = "+ str(int(c)))
